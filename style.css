@@ -72,7 +72,7 @@ a {
 }
 
 p {
-  font-size: 18px;
+  /* font-size: 18px; */
 }
 
 p a {
@@ -233,6 +233,13 @@ section {
   align-items: center;
 }
 
+.flex-row-keep {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
 section > div:first-child {
   /* width: 50%; */
   /* border-right: 3px var(--white) solid; */
@@ -282,8 +289,8 @@ section > div:first-child {
 }
 
 .card-list {
-  display: flex;
-  flex-flow: row;
+  /* display: flex;
+  flex-flow: row; */
   gap: 20px;
 }
 
@@ -461,24 +468,52 @@ p.subtitle {
 
 
 
-@media (max-width: 1024px)
+@media (max-width: 1200px)
 {
-  /* body {
-    width: 90%;
+  section {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 1000px)
+{
+  section {
+    flex-flow: column;
   }
 
-  a:before {
-    height: 2px;
-    bottom: -2px;
+  .show-first {
+    order: -1;
+  }
+
+  .section-div {
+    width: 80%;
+  }
+}
+
+
+@media (max-width: 800px)
+{
+  .vr, hr, .placeholder {
+    display: none;
+  }
+  .flex-row, .timeline-year {
+    flex-flow: column;
   }
 
   h1 {
-    font-size: 32px;
+    font-size: 3em;
+    align-self: center;
   }
 
-  #peoplelist {
+  #header {
+    font-size: 5em;
+  }
+
+  .tl-cards {
     width: 100%;
-    margin: auto;
-  } */
+  }
+
+
 
 }
