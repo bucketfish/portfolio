@@ -248,10 +248,9 @@ section > div:first-child {
   /* text-align: center; */
 }
 
-.flex-row.links {
+.flex-row-keep.links {
   justify-content: left;
   gap: 15px;
-
 }
 
 
@@ -404,18 +403,26 @@ p.subtitle {
   display: flex;
   border-radius: 20px;
   position: relative;
+  transition: 0.3s;
 }
 
-.timeline-card:not(:first-child)::before {
+.timeline-card:hover {
+  transform: scale(1.02);
+  /* background-color: var(--whitehint); */
+}
+
+/* .timeline-card:not(:first-child)::before  */
+.timeline-linker{
   content: "";
   width: 10px;
   height: 25px;
   background-color: var(--blue);
-  position: absolute;
+  position: relative;
   display: inline-block;
   margin-top: -25px;
+  margin-bottom: -25px;
   margin-left: 7%;
-
+  z-index: -10;
 }
 
 .timeline-icon {
@@ -429,7 +436,12 @@ p.subtitle {
   flex-flow: column;
   align-items: center;
   justify-content: center;
+  transition: 0.3s;
   /* margin-right: 10px; */
+}
+
+.timeline-card:hover .timeline-icon {
+  background-color: var(--white);
 }
 
 .timeline-info {
