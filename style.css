@@ -1,0 +1,484 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&display=swap');
+
+
+:root {
+    --red: #ffcaca;
+    --orange: #ffedc1;
+    --yellow: #feffb8;
+    --green: #c4ffcb;
+    --blue: #add8ff;
+    --purple: #ccafe9;
+    --pink: #EBADCB;
+
+    --darkgreen: #3E885B;
+    --darkblue: #7fb4f5;
+
+    --white: #fefefa;
+    --lightgray: #94B0C2;
+    --lightblue: #d1e9ff;
+    --gray: #ADACB5;
+    --darkgray: #333C57;
+    --black: #454545;
+    --black2: #595c60;
+    --trueblack: #242424;
+
+    --lessred: #ffcacaaa;
+    --lessorange: #ffedc1aa;
+    --lessyellow: #feffb8aa;
+    --lessgreen: #c4ffcbaa;
+    --lessblue: #add8ffaa;
+    --lesspurple: #ccafe9aa;
+    --pinkhint: #efbdd555;
+    --bluehint: #add8ff55;
+    --whitehint: #ffffff55;
+    --blackhint: #00000055;
+
+
+    --rainbow: linear-gradient(to bottom, var(--red) 0%, var(--orange) 20%, var(--yellow) 40%, var(--green) 60%, var(--blue) 80%,  var(--purple) 100%);
+    --rainbowright: linear-gradient(to right, var(--red) 0%, var(--orange) 20%, var(--yellow) 40%, var(--green) 60%, var(--blue) 80%,  var(--purple) 100%);
+    --hrainbow: linear-gradient(to right, #00000000 0%, var(--lessred) 14%, var(--orange) 28%, var(--yellow) 42%, var(--green) 56%, var(--blue) 70%,  var(--lesspurple) 84%, #00000000 100%);
+    --vrainbow: linear-gradient(to bottom, #00000000 0%, var(--lessred) 14%, var(--orange) 28%, var(--yellow) 42%, var(--green) 56%, var(--blue) 70%,  var(--lesspurple) 84%, #00000000 100%);
+    --bgrainbow: linear-gradient(to right, var(--lessred) 0%, var(--lessorange) 20%, var(--lessyellow) 40%, var(--lessgreen) 60%, var(--lessblue) 80%,  var(--lesspurple) 100%);
+}
+
+
+* {
+
+}
+
+html {
+  color: var(--lightblue);
+  background-color: #454545;
+  font-family: Roboto, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  /* height: 100%; */
+  /* width: 50%; */
+  /* margin: 20px auto; */
+  /* padding-bottom: 50px; */
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  font-size: inherit;
+  display: inline-block;
+  color: inherit;
+  position: relative;
+  text-decoration: none;
+}
+
+p {
+  font-size: 18px;
+}
+
+p a {
+  transition: linear 0.2s;
+  color: var(--purple);
+}
+
+p a:before {
+  background: var(--rainbowright);
+  content: '';
+  height: 2px;
+  position: absolute;
+  bottom: -1px;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width 0.2s ease-in-out;
+}
+
+p a:hover{
+  color: var(--white);
+}
+
+p a:hover:before{
+  width: 0;
+}
+
+strong {
+  /* color: var(--white); */
+  /* font-weight: normal; */
+  /* text-shadow: 0.5px 0.5px var(--lessblue); */
+  /* text-decoration: underline dashed 2px var(--white); */
+
+
+}
+
+
+li p{
+  margin: 5px 0;
+}
+
+hr {
+  background-image: var(--hrainbow);
+  width: 70%;
+  border: 0;
+  height: 2px;
+}
+
+h1 {
+  font-family: Merriweather, Georgia, serif;
+  font-size: 4em;
+  margin: 0;
+  color: var(--white);
+  text-shadow: 2.5px 2.5px var(--lessblue);
+  /* text-align: center; */
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  margin-top: 0;
+  color: var(--white);
+  /* font-weight: normal; */
+}
+
+
+code {
+  font-family: 'Courier New', monospace;
+}
+
+svg {
+  width: 30px;
+
+}
+
+svg path {
+  fill: var(--blue);
+  transition: 0.3s;
+}
+
+a svg:hover path {
+  fill: var(--white);
+}
+
+.vr {
+  width: 2px;
+  background-image: var(--vrainbow);
+  /* height: 300px; */
+  flex-shrink: 0;
+  align-self: stretch;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-track {
+  -moz-background-clip: padding;     /* Firefox 3.6 */
+  -webkit-background-clip: padding;  /* Safari 4? Chrome 6? */
+  background-clip: padding-box;
+  margin: 16px 0;
+  background-image: var(--rainbow);
+  border: 5px solid rgba(0, 0, 0, 0);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 6px var(--lessblue);
+  border: 2px solid var(--blue);
+  box-sizing: border-box;
+  background: transparent;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  border: 2px solid var(--white);
+  box-shadow: inset 0 0 6px rgba(254, 254, 250, 1);
+}
+
+
+
+
+#container {
+  /* width: 1200px; */
+  margin: 40px 0;
+}
+
+section {
+  width: 1200px;
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
+  /* margin: 0 auto; */
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 25px;
+  padding-top: 25px;
+  margin: 0 auto;
+  /* gap: 60px; */
+  /* margin: 0; */
+}
+
+.section-div {
+  /* width: 50%; */
+  padding: 0 30px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+
+.flex-row {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+section > div:first-child {
+  /* width: 50%; */
+  /* border-right: 3px var(--white) solid; */
+  align-items: stretch;
+  gap: 15px;
+  /* text-align: center; */
+}
+
+.flex-row.links {
+  justify-content: left;
+  gap: 15px;
+
+}
+
+
+#photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+
+  object-fit: cover;
+  object-position: 50% 30%;
+  border: 2px solid var(--blue);
+  flex-shrink: 0;
+  margin-right: 20px;
+  /* shape-outside: circle(50%); */
+}
+
+#header {
+  font-size: 7em;
+  text-shadow: none;
+}
+
+#header span{
+  animation-delay: var(--n);
+  animation: wave 1s linear var(--n) infinite forwards running, rainbow 3s linear var(--n) infinite forwards running;
+  position: relative;
+}
+
+#hello-text {
+  margin-bottom: 0;
+}
+
+#skills {
+  background-color: var(--black2);
+  /* width: 1600px; */
+}
+
+.card-list {
+  display: flex;
+  flex-flow: row;
+  gap: 20px;
+}
+
+.card-list-column {
+  display: flex;
+  flex-flow: column;
+  gap: 20px;
+  min-width: 45%;
+}
+
+
+.card {
+  background-color: var(--black);
+  padding: 25px;
+  padding-bottom: 10px;
+  border-radius: 20px;
+
+  /* border: 2px solid var(--blue); */
+}
+
+.card h2 {
+  margin-bottom: 10px;
+  margin-top: 0;
+  color: var(--white);
+  /* font-weight: normal; */
+}
+
+.card p {
+  margin: 0;
+  /* font-weight: bold; */
+}
+
+p.subtitle {
+  font-style: italic;
+  font-weight: 300;
+  color: var(--gray);
+
+}
+
+.card-item {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+#timeline {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.proj-list {
+  display: flex;
+  justify-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+
+#exp {
+  flex-flow: column;
+  gap: 15px;
+}
+
+#exp p {
+  /* margin: 0; */
+}
+
+#exp svg {
+  margin: auto;
+  width: 40px;
+}
+
+#exp svg path {
+  fill: var(--black);
+}
+
+.timeline-year {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.tl-year-text, .placeholder {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.tl-year-text p {
+  font-family: Merriweather, Georgia, serif;
+  font-size: 2em;
+  margin: 0;
+  font-weight: bold;
+}
+
+.tl-cards {
+  display: flex;
+  flex-flow: column;
+  width: 80%;
+  gap: 25px;
+}
+
+.timeline-card {
+  background-color: var(--black2);
+  width: 100%;
+  display: flex;
+  border-radius: 20px;
+  position: relative;
+}
+
+.timeline-card:not(:first-child)::before {
+  content: "";
+  width: 10px;
+  height: 25px;
+  background-color: var(--blue);
+  position: absolute;
+  display: inline-block;
+  margin-top: -25px;
+  margin-left: 7%;
+
+}
+
+.timeline-icon {
+  width: 15%;
+  background-color: var(--blue);
+  border-radius: 20px 0 0 20px;
+  flex-shrink: 0;
+  font-size: 4em;
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  /* margin-right: 10px; */
+}
+
+.timeline-info {
+  padding: 20px 25px 0 25px;
+}
+.timeline-info p {
+  margin-top: 0;
+}
+
+@media screen and (prefers-reduced-motion: reduce;)
+{
+  #header span {
+    animation: none;
+  }
+}
+
+@keyframes wave{
+  0%    {top: 0px;}
+  25%   {top: -3px;}
+  50%   {top: 0px;}
+  75%  {top: 3px;}
+  100% {top: 0px;}
+}
+
+@keyframes rainbow{
+  0% {color: var(--red);}
+  17% {color: var(--orange);}
+  33% {color: var(--yellow);}
+  50% {color: var(--green);}
+  67% {color: var(--blue);}
+  83% {color: var(--purple);}
+  100% {color: var(--red);}
+}
+
+
+
+
+
+@media (max-width: 1024px)
+{
+  /* body {
+    width: 90%;
+  }
+
+  a:before {
+    height: 2px;
+    bottom: -2px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  #peoplelist {
+    width: 100%;
+    margin: auto;
+  } */
+
+}
