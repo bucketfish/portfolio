@@ -132,8 +132,8 @@ h1 {
   font-family: Merriweather, Georgia, serif;
   font-size: 4em;
   margin: 0;
-  color: var(--white);
-  text-shadow: 2.5px 2.5px var(--lessblue);
+  color: var(--lightblue);
+  text-shadow: 2.5px 2.5px var(--gray);
   /* text-align: center; */
 }
 
@@ -392,6 +392,7 @@ p.subtitle {
 .tl-year-text, .placeholder {
   flex-grow: 1;
   flex-basis: 0;
+  color: var(--blue);
 }
 
 .tl-year-text p {
@@ -520,8 +521,21 @@ p.subtitle {
   .vr, hr, .placeholder {
     display: none;
   }
-  .flex-row, .timeline-year {
+  .flex-row, .timeline-year, .timeline-card {
     flex-flow: column;
+  }
+
+  .timeline-icon {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .timeline-linker {
+    margin-left: calc(50% - 5px);
+  }
+
+  .timeline-year {
+    align-items: center;
   }
 
   h1 {
@@ -533,10 +547,9 @@ p.subtitle {
     font-size: 5em;
   }
 
-  .tl-cards {
+  .tl-cards, .card-list-column {
     width: 100%;
   }
-
 
 
 }
