@@ -61,6 +61,13 @@ body {
   /* padding-bottom: 50px; */
   padding: 0;
   margin: 0;
+  opacity: 0;
+  animation: appear 0.5s ease-in-out 0.1s forwards;
+}
+
+@keyframes appear {
+  0% {opacity: 0;}
+  100% { opacity: 100%; }
 }
 
 a {
@@ -149,8 +156,12 @@ svg {
 }
 
 svg path {
-  fill: var(--blue);
+  fill: var(--white);
   transition: 0.3s;
+}
+
+a svg path {
+  fill: var(--blue);
 }
 
 a svg:hover path {
@@ -313,7 +324,7 @@ section > div:first-child {
 .card h2 {
   margin-bottom: 10px;
   margin-top: 0;
-  color: var(--white);
+  color: var(--blue);
   /* font-weight: normal; */
 }
 
