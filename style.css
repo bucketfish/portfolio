@@ -10,17 +10,11 @@
     --purple: #ccafe9;
     --pink: #EBADCB;
 
-    --darkgreen: #3E885B;
-    --darkblue: #7fb4f5;
-
     --white: #fefefa;
-    --lightgray: #94B0C2;
     --lightblue: #d1e9ff;
     --gray: #ADACB5;
-    --darkgray: #333C57;
     --black: #454545;
     --black2: #595c60;
-    --trueblack: #242424;
 
     --lessred: #ffcacaaa;
     --lessorange: #ffedc1aa;
@@ -28,26 +22,16 @@
     --lessgreen: #c4ffcbaa;
     --lessblue: #add8ffaa;
     --lesspurple: #ccafe9aa;
-    --pinkhint: #efbdd555;
-    --bluehint: #add8ff55;
-    --whitehint: #ffffff55;
-    --blackhint: #00000055;
-
 
     --rainbow: linear-gradient(to bottom, var(--red) 0%, var(--orange) 20%, var(--yellow) 40%, var(--green) 60%, var(--blue) 80%,  var(--purple) 100%);
     --rainbowright: linear-gradient(to right, var(--red) 0%, var(--orange) 20%, var(--yellow) 40%, var(--green) 60%, var(--blue) 80%,  var(--purple) 100%);
     --rainbowhor: linear-gradient(120deg, var(--red) 0%, var(--orange) 20%, var(--yellow) 40%, var(--green) 60%, var(--blue) 80%,  var(--purple) 100%);
     --hrainbow: linear-gradient(to right, #00000000 0%, var(--lessred) 14%, var(--orange) 28%, var(--yellow) 42%, var(--green) 56%, var(--blue) 70%,  var(--lesspurple) 84%, #00000000 100%);
     --vrainbow: linear-gradient(to bottom, #00000000 0%, var(--lessred) 14%, var(--orange) 28%, var(--yellow) 42%, var(--green) 56%, var(--blue) 70%,  var(--lesspurple) 84%, #00000000 100%);
-    --bgrainbow: linear-gradient(to right, var(--lessred) 0%, var(--lessorange) 20%, var(--lessyellow) 40%, var(--lessgreen) 60%, var(--lessblue) 80%,  var(--lesspurple) 100%);
     --bgrainbowhor: linear-gradient(120deg, var(--lessred) 0%, var(--lessorange) 20%, var(--lessyellow) 40%, var(--lessgreen) 60%, var(--lessblue) 80%,  var(--lesspurple) 100%);
 
 }
 
-
-* {
-
-}
 
 html {
   color: var(--lightblue);
@@ -58,10 +42,6 @@ html {
 }
 
 body {
-  /* height: 100%; */
-  /* width: 50%; */
-  /* margin: 20px auto; */
-  /* padding-bottom: 50px; */
   padding: 0;
   margin: 0;
   opacity: 0;
@@ -81,9 +61,6 @@ a {
   text-decoration: none;
 }
 
-p {
-  /* font-size: 18px; */
-}
 
 p a {
   transition: linear 0.2s;
@@ -111,19 +88,12 @@ p a:hover:before{
 }
 
 strong {
-  /* padding: 1px 5px; */
-  /* background-color: var(--lightblue); */
   background-image: var(--rainbowhor);
   background-clip: text;
--webkit-background-clip: text;
-color: transparent;
-  /* color: var(--black2); */
+  -webkit-background-clip: text;
+  color: transparent;
   border-radius: 5px;
   font-weight: inherit;
-  /* color: var(--white); */
-  /* font-weight: normal; */
-  /* text-shadow: 0.5px 0.5px var(--lessblue); */
-  /* text-decoration: underline dashed 2px var(--white); */
 }
 
 .special {
@@ -148,7 +118,6 @@ h1 {
   margin: 0;
   color: var(--lightblue);
   text-shadow: 2.5px 2.5px var(--gray);
-  /* text-align: center; */
 }
 
 h2 {
@@ -156,7 +125,6 @@ h2 {
   margin-bottom: 10px;
   margin-top: 0;
   color: var(--white);
-  /* font-weight: normal; */
 }
 
 
@@ -166,7 +134,6 @@ code {
 
 svg {
   width: 30px;
-
 }
 
 svg path {
@@ -217,7 +184,6 @@ a svg:hover path {
   border: 2px solid var(--white);
   box-shadow: inset 0 0 6px rgba(254, 254, 250, 1);
 }
-
 
 
 
@@ -435,7 +401,6 @@ p.subtitle {
 
 .timeline-card:hover {
   transform: scale(1.02);
-  /* background-color: var(--whitehint); */
 }
 
 /* .timeline-card:not(:first-child)::before  */
