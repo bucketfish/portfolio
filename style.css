@@ -36,9 +36,12 @@
 
     --rainbow: linear-gradient(to bottom, var(--red) 0%, var(--orange) 20%, var(--yellow) 40%, var(--green) 60%, var(--blue) 80%,  var(--purple) 100%);
     --rainbowright: linear-gradient(to right, var(--red) 0%, var(--orange) 20%, var(--yellow) 40%, var(--green) 60%, var(--blue) 80%,  var(--purple) 100%);
+    --rainbowhor: linear-gradient(120deg, var(--red) 0%, var(--orange) 20%, var(--yellow) 40%, var(--green) 60%, var(--blue) 80%,  var(--purple) 100%);
     --hrainbow: linear-gradient(to right, #00000000 0%, var(--lessred) 14%, var(--orange) 28%, var(--yellow) 42%, var(--green) 56%, var(--blue) 70%,  var(--lesspurple) 84%, #00000000 100%);
     --vrainbow: linear-gradient(to bottom, #00000000 0%, var(--lessred) 14%, var(--orange) 28%, var(--yellow) 42%, var(--green) 56%, var(--blue) 70%,  var(--lesspurple) 84%, #00000000 100%);
     --bgrainbow: linear-gradient(to right, var(--lessred) 0%, var(--lessorange) 20%, var(--lessyellow) 40%, var(--lessgreen) 60%, var(--lessblue) 80%,  var(--lesspurple) 100%);
+    --bgrainbowhor: linear-gradient(120deg, var(--lessred) 0%, var(--lessorange) 20%, var(--lessyellow) 40%, var(--lessgreen) 60%, var(--lessblue) 80%,  var(--lesspurple) 100%);
+
 }
 
 
@@ -108,12 +111,23 @@ p a:hover:before{
 }
 
 strong {
+  /* padding: 1px 5px; */
+  /* background-color: var(--lightblue); */
+  background-image: var(--rainbowhor);
+  background-clip: text;
+-webkit-background-clip: text;
+color: transparent;
+  /* color: var(--black2); */
+  border-radius: 5px;
+  font-weight: inherit;
   /* color: var(--white); */
   /* font-weight: normal; */
   /* text-shadow: 0.5px 0.5px var(--lessblue); */
   /* text-decoration: underline dashed 2px var(--white); */
+}
 
-
+.special {
+  background-image: var(--bgrainbowhor);
 }
 
 
@@ -392,11 +406,12 @@ p.subtitle {
 .tl-year-text, .placeholder {
   flex-grow: 1;
   flex-basis: 0;
-  color: var(--blue);
 }
 
 .tl-year-text p {
-  font-family: Merriweather, Georgia, serif;
+  color: var(--blue);
+
+  /* font-family: Merriweather, Georgia, serif; */
   font-size: 2em;
   margin: 0;
   font-weight: bold;
@@ -506,18 +521,30 @@ p.subtitle {
     flex-flow: column;
   }
 
-  .show-first {
-    order: -1;
-  }
-
   .section-div {
     width: 80%;
+  }
+  .show-first {
+    order: -1;
+    width: 60%;
   }
 }
 
 
 @media (max-width: 800px)
 {
+  #container {
+    margin-top: 10px;
+  }
+
+  .section-div {
+    width: 90%;
+  }
+
+  .show-first {
+    width: 60%;
+  }
+
   .vr, hr, .placeholder {
     display: none;
   }
@@ -528,6 +555,8 @@ p.subtitle {
   .timeline-icon {
     width: 100%;
     border-radius: 20px 20px 0 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
   .timeline-linker {
@@ -541,6 +570,10 @@ p.subtitle {
   h1 {
     font-size: 3em;
     align-self: center;
+  }
+
+  #skills h1 {
+    margin-bottom: 10px;
   }
 
   #header {
