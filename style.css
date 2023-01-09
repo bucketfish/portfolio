@@ -331,6 +331,7 @@ p.subtitle {
   display: flex;
   flex-flow: column;
   align-items: center;
+  gap: 15px;
 }
 
 .proj-list {
