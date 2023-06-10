@@ -405,6 +405,9 @@ button.proj-tag.tag-selected p {
 
   box-sizing: border-box;
 
+  scroll-snap-type: x mandatory;
+
+
   /* margin-right: 30px; */
 }
 
@@ -481,6 +484,9 @@ button.proj-tag.tag-selected p {
 
   z-index: 1;
 
+  border-radius: 20px 20px 0 0;
+
+
 }
 
 
@@ -491,12 +497,17 @@ button.proj-tag.tag-selected p {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: linear-gradient(to bottom, transparent 0%, var(--lesswhite) 35%, var(--white) 90%);
+  background-image: linear-gradient(to bottom, transparent 0%, var(--lesswhite) 60%, var(--white) 90%);
 
   z-index: -1;
   opacity: 0;
 
   transition: 0.3s;
+
+
+  border-radius: 20px 20px 0 0;
+
+
 
 }
 
@@ -707,6 +718,26 @@ button.proj-tag.tag-selected p {
     order: -1;
     width: 60%;
   }
+
+  h1:not(#header) {
+    text-align: center;
+  }
+
+  #proj {
+    flex-flow: column-reverse;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .proj-scroll {
+    width: 80vw;
+  }
+
+  .proj-card {
+    min-width: 33vw;
+    max-width: 33vw;
+  }
+
 }
 
 
@@ -727,6 +758,19 @@ button.proj-tag.tag-selected p {
   .vr, hr, .placeholder {
     display: none;
   }
+
+
+  .proj-scroll {
+    width: 90vw;
+
+  }
+
+  .proj-card {
+    min-width: 85vw;
+    max-width: 85vw;
+  }
+
+
   .flex-row, .timeline-year, .timeline-card {
     flex-flow: column;
   }
@@ -762,6 +806,8 @@ button.proj-tag.tag-selected p {
   .tl-cards, .card-list-column {
     width: 100%;
   }
+
+
 
 
 }
