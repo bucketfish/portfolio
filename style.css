@@ -338,13 +338,10 @@ p.subtitle {
 
 
 #proj {
-  width: 90%;
+  /* width: 90%; */
   align-items: stretch;
 
   padding-top: 30px;
-
-  padding-left: 5%;
-  padding-right: 5%;
 
 
 }
@@ -364,209 +361,107 @@ p.subtitle {
 
 }
 
-button.proj-tag {
-  display: inline-block;
-  font-size: 1em;
-  border: 2px solid var(--blue);
-  border-radius: 25px;
-  background-color: transparent;
-  padding: 8px 20px;
-  box-shadow: none;
-
-  transition: 0.3s;
+.proj-side {
+  width: 40vw;
+}
+.proj-side-desc {
+  padding-top: 20px;
+}
+.proj-side-desc p {
+  margin-top: 5px;
 }
 
-button.proj-tag:hover {
-  background-color: var(--black2);
-}
-
-button.proj-tag.tag-selected {
-  background-color: var(--blue);
-}
-
-button.proj-tag p {
-  margin: 0;
-  color: var(--white);
-}
-
-button.proj-tag.tag-selected p {
-  color: var(--black);
-}
 .proj-scroll-box {
   display: flex;
   justify-content: center;
   align-items: stretch;
-  gap: 0 !important;
 }
 
 .proj-scroll {
   overflow-x: scroll;
-  width: 60vw;
+  scroll-behavior: smooth;
+
+  width: 40vw;
   display: flex;
   flex-flow: row;
-  gap: 15px;
 
   box-sizing: border-box;
 
   scroll-snap-type: x mandatory;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
 
-
-  /* margin-right: 30px; */
 }
 
-.proj-scroll:not(.proj-web):not(.proj-game):not(.proj-swift) .proj-card {
-  display: flex;
-}
-
-
-.proj-scroll.proj-game .proj-card.proj-game {
-  display: flex;
-}
-
-.proj-scroll.proj-web .proj-card.proj-web {
-  display: flex;
-}
-.proj-scroll.proj-swift .proj-card.proj-swift {
-  display: flex;
+.proj-scroll::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 
 .proj-card {
-  display: none;
+  display: flex;
   background-color: var(--black2);
-  min-width: 20vw;
-  max-width: 20vw;
+  width: 40vw;
+  height: 25vw;
   flex-grow: 0;
   flex-shrink: 0;
   flex-flow: column;
   border-radius: 20px;
-  position: relative;
   transition: 0.3s;
+  overflow: hidden;
 }
 
-.proj-card:hover .proj-header {
-  background-color: var(--white);
-}
-
-
-.proj-card:hover .proj-header .proj-overlay::before {
-  opacity: 1;
-}
-
-.proj-header {
-  background-color: var(--blue);
-  border-radius: 20px 20px 0 0;
-  height: 80%;
-
-  /* height: 15vw; */
-
-  background-size: cover;
-  background-position: center;
-
-  transition: 0.3s;
-
+.proj-card:hover {
+  transform: scale(1.05);
+  border-radius: 100px;
 
 }
 
-
-.proj-header .proj-overlay {
-  position: relative;
-
-  background-image: linear-gradient(to bottom, transparent 0%, var(--lessblue) 35%, var(--blue) 90%);
-  width: 100%;
-  height: 100%;
-
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-
-  padding: 20px 25px 5px 25px;
-  box-sizing: border-box;
-
-
-  z-index: 1;
-
-  border-radius: 20px 20px 0 0;
-
-
-}
-
-
-.proj-header .proj-overlay::before {
-  position: absolute;
-  content: '';
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-image: linear-gradient(to bottom, transparent 0%, var(--lesswhite) 60%, var(--white) 90%);
-
-  z-index: -1;
-  opacity: 0;
-
-  transition: 0.3s;
-
-
-  border-radius: 20px 20px 0 0;
-
-
-
+.proj-card img {
+  width: 40vw;
+  height: 25vw;
+  object-fit: cover;
 }
 
 
 
-.proj-date {
-  display: inline-block;
-  text-align: center;
-  color: var(--black2);
-  margin: 0;
-  margin-top: 10px;
-  margin-bottom: 5px;
 
-}
-.proj-header h2 {
-
-  color: var(--black);
-  text-align: center;
-  margin: 0;
-
-}
-
-.proj-desc {
-  padding: 20px 25px 20px 25px;
-
-}
-
-#proj p.subtitle {
-  margin: 0;
-}
-
-
-
-.proj-scroll-left {
-  width: 3vw;
-  /* height: 100%; */
-  background-image: linear-gradient(to left, transparent 0%, var(--black) 75%);
-  /* background-color: red; */
-  margin-right: -2.5vw;
+.proj-scroll-side {
   z-index: 5;
   position: relative;
   padding: 5px 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
 }
 
 
-.proj-scroll-right {
-  width: 3vw;
-  /* height: 100%; */
-  background-image: linear-gradient(to right, transparent 0%, var(--black) 75%);
-  /* background-color: red; */
-  margin-left: -2.5vw;
-  z-index: 5;
-  position: relative;
+.proj-button {
+  padding: 15px;
+  border: none;
+  background-color: var(--lessblue);
+  transition: 0.3s;
+
 }
 
+.proj-button:hover {
+  background-color: var(--blue);
+}
 
+#proj-left-button {
+  border-radius: 0 50px 50px 0;
+  margin-right: -25px;
+
+}
+
+#proj-right-button {
+
+  border-radius: 50px 0 0 50px;
+  margin-left: -25px;
+
+
+}
 
 #exp {
   flex-flow: column;
