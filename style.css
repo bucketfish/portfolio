@@ -400,13 +400,11 @@ p.subtitle {
 
 
 .proj-card {
-  display: flex;
   background-color: var(--black2);
   width: 40vw;
-  height: 25vw;
+  aspect-ratio: 40/25;
   flex-grow: 0;
   flex-shrink: 0;
-  flex-flow: column;
   border-radius: 20px;
   transition: 0.3s;
   overflow: hidden;
@@ -420,7 +418,7 @@ p.subtitle {
 
 .proj-card img {
   width: 40vw;
-  height: 25vw;
+  aspect-ratio: 40/25;
   object-fit: cover;
 }
 
@@ -624,7 +622,6 @@ p.subtitle {
   #proj {
     flex-flow: column-reverse;
     align-items: center;
-    gap: 10px;
   }
 
   .proj-scroll {
@@ -632,8 +629,11 @@ p.subtitle {
   }
 
   .proj-card {
-    min-width: 33vw;
-    max-width: 33vw;
+    width: 80vw;
+  }
+
+  .proj-card img {
+    width: 80vw;
   }
 
 }
@@ -658,16 +658,10 @@ p.subtitle {
   }
 
 
-  .proj-scroll {
+  .proj-scroll, .proj-card, .proj-card img {
     width: 90vw;
 
   }
-
-  .proj-card {
-    min-width: 85vw;
-    max-width: 85vw;
-  }
-
 
   .flex-row, .timeline-year, .timeline-card {
     flex-flow: column;
