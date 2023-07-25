@@ -440,6 +440,7 @@ p.subtitle {
   border: none;
   background-color: var(--lessblue);
   transition: 0.3s;
+  color: var(--black);
 
 }
 
