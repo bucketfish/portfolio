@@ -1,0 +1,118 @@
+img, video {
+  max-width: 100%;
+}
+
+section > div > img, section > div> video {
+  width: 100%;
+}
+
+main a {
+  font-size: inherit;
+  color: inherit;
+  opacity: 60%;
+  text-decoration: underline;
+}
+
+main a:hover {
+  background-color: var(--white);
+}
+
+main {
+  /* padding-top: 80px; */
+  display: flex;
+  flex-flow: column;
+  /* gap: 24px; */
+}
+
+section {
+  padding-bottom: 4px;
+  padding-top: 32px;
+  /* padding: 4px 0; */
+}
+
+
+section > div {
+  width: min(920px, 90%);
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  gap: 24px;
+}
+
+section:nth-of-type(1) {
+  padding-top: 80px;
+  background-color: var(--mblue);
+}
+
+section:nth-of-type(2) {
+  background-color: var(--lblue);
+}
+
+section:nth-of-type(3) {
+  background-color: var(--dpink);
+}
+
+section:nth-of-type(4) {
+  background-color: var(--lpink);
+}
+
+section:nth-of-type(5) {
+  background-color: var(--purple);
+}
+
+
+hr.divider {
+  margin-top: 24px;
+}
+
+.flexbox {
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+  align-items: top;
+  /* padding-top: 16px; */
+  width: 100%;
+}
+
+.flexbox.vert {
+  flex-flow: column;
+  justify-content: space-around;
+  /* width: 200%; */
+}
+
+.flexbox.vert img {
+  width: 100%;
+}
+
+.flexbox.biggap {
+  gap: 32px;
+}
+
+.flexbox.two > * {
+  width: calc(50% - 4px);
+}
+
+.flexbox.three > * {
+  width: calc(33.33% - 5.333px)
+}
+
+.flexbox.seven > *{
+  width: calc(14.28% - 6.857px)
+}
+
+
+.flexbox.two.biggap > * {
+  width: calc(50% - 16px);
+}
+
+.flexbox.three.biggap > * {
+  width: calc(33.33% - 21.33px)
+}
+
+
+
+
+.text p {
+  margin-bottom: 16px;
+}
