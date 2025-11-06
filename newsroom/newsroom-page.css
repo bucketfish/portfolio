@@ -1,0 +1,31 @@
+
+main {
+  width: 100%;
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    [full-start] 1fr [wide-start] 60px [content-start] repeat(3, 350px) [content-end] 60px [wide-end] 1fr [full-end];
+
+  grid-template-rows:
+    [margin-start bg1-start] 80px [margin-end intro-start] [intro-end bg1-end bg2-start proj-start] auto auto auto [proj-end] 16px [bg2-end bg3-start news-start] auto 16px [news-end bg3-end bg4-start photos-start] 16px auto [photos-end bg4-end bg5-start skills-start] 16px auto [skills-end bg5-end bg6-start experience-start] auto auto [experience-end] 32px [bg6-end];
+
+
+  grid-template-areas:
+    ". . . . . . ." /*margin*/
+    ". . header header header . ." /*intro*/
+    ". . proj-text . . . ." /*proj*/
+    ". . . . . . ." /*proj*/
+    ". . . . newsbox newsbox ." /*proj*/
+    ". . . . newsbox newsbox ." /*news*/
+    ". . . . newsbox newsbox ." /*news*/
+    ". . . . newsbox newsbox ." /*skills*/
+    ". . . . . . ." /*photos*/
+    ". . . . . . ." /*skills*/
+    ". . . . . . ." /*skills*/
+    ". . exptext exptext exptext . ." /*exp*/
+    ". e1 e1 e2 e3 e3 ." /*exp*/
+    ". . . . . . ." /*margin*/
+    ;
+}

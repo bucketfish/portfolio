@@ -54,6 +54,10 @@ main {
   text-align: center;
 }
 
+#intro a {
+  text-decoration: underline;
+}
+
 #intro h1 {
   color: var(--white);
 }
